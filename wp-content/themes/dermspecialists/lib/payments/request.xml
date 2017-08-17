@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope 
+xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+	<SOAP-ENV:Header />
+	<SOAP-ENV:Body>
+		<fdggwsapi:FDGGWSApiOrderRequest xmlns:v1="http://secure.linkpt.net/fdggwsapi/schemas_us/v1" xmlns:fdggwsapi="http://secure.linkpt.net/fdggwsapi/schemas_us/fdggwsapi">
+			<v1:Transaction>
+				<v1:CreditCardTxType>
+					<v1:Type>sale</v1:Type>
+				</v1:CreditCardTxType>
+				<v1:CreditCardData>
+					<v1:CardNumber>{{{cc_num}}}</v1:CardNumber>
+					<v1:ExpMonth>{{{exp_month}}}</v1:ExpMonth>
+					<v1:ExpYear>{{{exp_year}}}</v1:ExpYear>
+				</v1:CreditCardData>
+				<v1:Payment>
+					<v1:ChargeTotal>{{{total}}}</v1:ChargeTotal>
+				</v1:Payment>
+				<v1:TransactionDetails>
+					<v1:Recurring>No</v1:Recurring>
+				</v1:TransactionDetails>
+				<v1:Billing>
+					<v1:CustomerID>{{{customer_id}}}</v1:CustomerID>
+					<v1:Name>{{{customer_name}}}</v1:Name>
+					<v1:Address1>{{{customer_address}}}</v1:Address1>
+					<v1:City>{{{customer_city}}}</v1:City>
+					<v1:State>{{{customer_state}}}</v1:State>
+					<v1:Zip>{{{customer_zip}}}</v1:Zip>
+					<v1:Phone>{{{customer_phone}}}</v1:Phone>
+					<v1:Email>{{{customer_email}}}</v1:Email>
+				</v1:Billing>
+			</v1:Transaction>
+		</fdggwsapi:FDGGWSApiOrderRequest>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
